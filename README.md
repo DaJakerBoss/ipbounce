@@ -10,11 +10,11 @@ ipbounce is also version-agnostic; it accepts both IPv4 and IPv6 for control and
 Specifically, ipbounce:
 
 - Listens for all incoming IP packets, regardless of protocol
-- If the protocol type is 180, follow the instructions
-- If the source IP has no associated connection, drop the packet silently
-- Change the "destination" in the packet to the other end of the connection
-- Reset the TTL to 255
-- Send the packet to the other end of the connection, otherwise unchanged
+- If the protocol type is 180, follows the instructions
+- If the source IP has no associated connection, drops the packet silently
+- Changes the "destination" in the packet to the other end of the connection
+- Resets the TTL to 255
+- Sends the packet to the other end of the connection, otherwise leaves it unchanged
 
 Note that this is currently a project to (re)familiarize myself with sockets and C.
 There are **several** gaping security holes.
